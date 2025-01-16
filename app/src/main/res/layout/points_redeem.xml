@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 포인트 사용 여부 질문 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_very_light_gray"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <!-- 포인트 사용 여부 텍스트 -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="포인트를 사용하시겠습니까?" />
+
+        <!-- 남은 결제 금액 안내 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginHorizontal="20dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:orientation="horizontal">
+
+            <!-- 남은 결제 금액 텍스트 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남은 결제 금액" />
+
+            <!-- 남은 결제 금액 값 (동적으로 업데이트될 부분) -->
+            <TextView
+                android:id="@+id/text_remaining_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textStyle="bold"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 잔여 포인트와 포인트 사용 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 잔여 포인트 안내 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp">
+
+            <!-- 잔여 포인트 텍스트 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="잔여 포인트" />
+
+            <!-- 잔여 포인트 값 (동적으로 업데이트될 부분) -->
+            <TextView
+                android:id="@+id/text_remaining_points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0P"
+                android:textAlignment="textEnd"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <!-- 포인트 사용 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="10dp">
+
+            <!-- 포인트 사용 입력 부분 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border"
+                android:orientation="horizontal">
+
+                <!-- 사용 포인트 안내 텍스트 -->
+                <TextView
+                    android:id="@+id/text_payment_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold" />
+
+                <!-- 전체 사용 버튼 -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_total_redeemed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="전체 사용" />
+            </LinearLayout>
+
+            <!-- 최소 사용 포인트 안내 텍스트 -->
+            <TextView
+                android:id="@+id/text_min_points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginVertical="16dp"
+                android:textSize="12dp"
+                android:textAlignment="center"
+                android:text="최소 사용 포인트는 500P 입니다." />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 숫자 입력 패드 영역 (동적으로 표시될 영역) -->
+    <FrameLayout
+        android:id="@+id/frame_number_pad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 버튼 영역 (사용 안 함, 확인) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="40dp"
+        android:layout_marginVertical="20dp"
+        android:orientation="horizontal">
+
+        <!-- 사용 안 함 버튼 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_not_use_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:onClick="onClickedInPointsDialog"
+            android:textColor="@color/my_light_coral"
+            android:background="@drawable/button_cancel_border_selector"
+            android:text="사용 안 함" />
+
+        <!-- 확인 버튼 -->
+        <Button
+            android:id="@+id/button_use_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:onClick="onClickedInPointsDialog"
+            android:background="@drawable/button_no_radius"
+            android:text="확인" />
+    </LinearLayout>
+
+</LinearLayout>

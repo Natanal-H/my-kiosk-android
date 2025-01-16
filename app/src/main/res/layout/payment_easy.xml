@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!-- QR코드/바코드를 스캔하라는 안내 텍스트 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="QR코드/바코드를 스캔해 주세요"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <!-- 결제 가능 결제 서비스 안내 텍스트 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="네이버페이, 카카오페이, 제로페이, SSG페이, \n L페이, 앱카드 결제가 가능합니다." />
+
+    <!-- 결제 관련 이미지 (QR코드 또는 바코드 이미지) -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:srcCompat="@drawable/payment_easy" />
+
+    <!-- 결제 금액 텍스트 -->
+    <TextView
+        android:id="@+id/text_payment_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="결제 금액"
+        android:textColor="#3B3F6D"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+</LinearLayout>

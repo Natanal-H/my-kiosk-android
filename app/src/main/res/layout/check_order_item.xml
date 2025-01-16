@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp"
+    android:background="@drawable/border_bottom" >
+
+    <!-- 하나의 테이블 행 (TableRow) -->
+    <TableRow>
+
+        <!-- 커피 이름을 표시하는 TextView -->
+        <TextView
+            android:id="@+id/coffee_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="이름" />
+
+        <!-- 커피 수량을 표시하는 TextView -->
+        <TextView
+            android:id="@+id/coffee_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="수량" />
+
+        <!-- 커피 가격을 표시하는 TextView -->
+        <TextView
+            android:id="@+id/coffee_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="가격" />
+
+    </TableRow>
+</TableLayout>

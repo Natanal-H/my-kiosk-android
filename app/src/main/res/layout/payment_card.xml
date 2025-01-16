@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!-- 결제 안내 텍스트 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="결제하실 카드를 \n투입구에 넣어주세요"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <!-- 결제 카드 아이콘 이미지 -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:srcCompat="@drawable/payment_card" />
+
+    <!-- 결제 금액 텍스트 -->
+    <TextView
+        android:id="@+id/text_payment_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="결제 금액"
+        android:textColor="#3B3F6D"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+</LinearLayout>

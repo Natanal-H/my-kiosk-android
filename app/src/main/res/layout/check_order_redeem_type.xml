@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 포인트 적립 카드 프레임 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1"
+        android:onClick="onClickPointsRedeem"
+        android:background="@drawable/border"
+        android:clickable="true"
+        android:focusable="true" >
+
+        <!-- 카드 내부 내용, 배경에 클릭 효과 적용 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_background"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <!-- 카드 제목과 화살표 아이콘을 수평 배치 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <!-- 포인트 적립 텍스트 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"
+                    android:text="포인트 적립" />
+
+                <!-- 화살표 아이콘 -->
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/icon_right" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 쿠폰 카드 프레임 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1"
+        android:onClick="onClickCouponRedeem"
+        android:background="@drawable/border"
+        android:clickable="true"
+        android:focusable="true" >
+
+        <!-- 카드 내부 내용, 배경에 클릭 효과 적용 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_background"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <!-- 카드 제목과 화살표 아이콘을 수평 배치 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <!-- 쿠폰 텍스트 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"
+                    android:text="쿠폰" />
+
+                <!-- 화살표 아이콘 -->
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/icon_right" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

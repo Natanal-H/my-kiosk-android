@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 닫기 버튼 (X) -->
+    <ImageButton
+        android:id="@+id/buttonX_check_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_gravity="right"
+        android:onClick="onClickedInPointsDialog"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <!-- 포인트 적립 여부 질문 텍스트 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:text="포인트를 적립하시겠습니까?" />
+
+    <!-- 적립 예정 포인트 안내 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="40dp"
+        android:background="@drawable/border"
+        android:padding="16dp" >
+
+        <!-- 적립 예정 포인트 텍스트 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="적립 예정 포인트" />
+
+        <!-- 적립 예정 포인트 값 (동적으로 설정) -->
+        <TextView
+            android:id="@+id/text_expected_earn_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:text="0P" />
+    </LinearLayout>
+
+    <!-- 전화번호 입력 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- 전화번호 첫 번째 부분 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:text="010" />
+
+        <!-- 전화번호 구분용 텍스트 ("-") -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:text=" - " />
+
+        <!-- 전화번호 두 번째 부분 -->
+        <TextView
+            android:id="@+id/text_phone_number_1"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <!-- 전화번호 구분용 텍스트 ("-") -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:text=" - " />
+
+        <!-- 전화번호 세 번째 부분 -->
+        <TextView
+            android:id="@+id/text_phone_number_2"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:text="" />
+    </LinearLayout>
+
+    <!-- 숫자 입력 패드 (동적으로 구현될 영역) -->
+    <FrameLayout
+        android:id="@+id/frame_number_pad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- "적립 안 함" 버튼 -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_earn_points_check"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="onClickedInPointsDialog"
+        android:background="@drawable/button_cancel_border_selector"
+        android:textSize="24dp"
+        android:textColor="@color/my_light_coral"
+        android:textStyle="bold"
+        android:text="적립 안 함" />
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 닫기 버튼 (X) -->
+    <ImageButton
+        android:id="@+id/buttonX_check_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_gravity="right"
+        android:onClick="onClickedInPointsDialog"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <!-- 전화번호 및 포인트 적립 안내 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:padding="16dp">
+
+        <!-- 전화번호 안내 텍스트 -->
+        <TextView
+            android:id="@+id/text_phone_number_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="010-0000-0000"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <!-- 포인트 적립 안내 텍스트 -->
+        <TextView
+            android:id="@+id/text_expected_earn_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="위 번호로 포인트가 적립됩니다."
+            android:textSize="20dp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <!-- 약관 안내 텍스트 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="40dp"
+        android:background="@drawable/border"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="24dp" >
+
+        <!-- 약관 안내 텍스트 -->
+        <TextView
+            android:id="@+id/text_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/my_dark_gray"
+            android:textSize="12dp"
+            android:text="약관 안내" />
+
+    </LinearLayout>
+
+    <!-- 이벤트 및 쿠폰 혜택 안내 및 체크박스 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingVertical="32dp">
+
+        <!-- 이벤트 및 쿠폰 안내 텍스트 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이벤트, 쿠폰 등 혜택 안내를 받으실 수 있어요."
+            android:textColor="@color/my_purple"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:textAlignment="center" />
+
+        <!-- 체크박스 -->
+        <CheckBox
+            android:id="@+id/checkBox_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/my_dark_gray"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:buttonTint="@color/my_purple"
+            android:text="" />
+    </LinearLayout>
+
+    <!-- 확인 버튼 -->
+    <Button
+        android:id="@+id/button_earn_points_check"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:onClick="onClickedInPointsDialog"
+        android:background="@drawable/button_no_radius"
+        android:text="확인"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

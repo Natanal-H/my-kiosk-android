@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200sp">
+
+    <!-- 이미지뷰 -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coupon" />
+
+    <TextView
+        android:id="@+id/couponName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="18dp"
+        android:text="쿠폰이름"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/coupondescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/couponName"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="-25dp"
+        android:text="쿠폰설명"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/couponPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="48dp"
+        android:text="유효기간"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/couponavailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="85dp"
+        android:text="사용가능 유무" />
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/couponPeriod"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginBottom="41dp"
+        android:text="갯수"
+        android:textSize="16sp" />
+
+    <!-- 텍스트뷰 (이미지뷰 위에 위치) -->
+</RelativeLayout>

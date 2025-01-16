@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 커피 이름 배열 -->
+    <string-array name="coffee_names">
+        <item>아메리카노</item>
+        <item>카페라떼</item>
+        <item>카페모카</item>
+        <item>바닐라라떼</item>
+        <item>딸기라떼</item>
+        <item>에스프레소</item>
+        <item>카라멜마끼아또</item>
+        <item>아이스티</item>
+    </string-array>
+
+    <!-- 커피 개수 배열 -->
+    <array name="coffee_quantity">
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+    </array>
+
+    <!-- 커피 가격 배열 -->
+    <array name="coffee_price">
+        <item>4000</item>
+        <item>4500</item>
+        <item>5000</item>
+        <item>5000</item>
+        <item>5000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>5000</item>
+    </array>
+
+    <!-- 커피 옵션 배열: 커피의 옵션 정보를 저장하는 배열 (쉼표로 구분된 값들) -->
+    <!-- 얼음, 사이즈, 샷 추가, 저지방 우유 -->
+    <array name="coffee_options">
+        <item>0,1,1,1</item>
+        <item>0,0,0,0</item>
+        <item>0,0,0,0</item>
+        <item>0,0,0,0</item>
+        <item>0,0,0,0</item>
+        <item>0,0,0,0</item>
+        <item>0,0,0,0</item>
+        <item>1,0,0,0</item>
+    </array>
+
+    <!-- 전화번호 배열: 여러 전화번호를 저장하는 배열 -->
+    <string-array name="phone_numbers">
+        <item>01050188065</item>
+        <item>01012345678</item>
+        <item>01026328065</item>
+        <item>01000000000</item>
+        <item>01011111111</item>
+    </string-array>
+
+    <!-- 포인트 값 배열: 각 전화번호에 해당하는 포인트 값을 저장하는 배열 -->
+    <array name="point_values">
+        <item>10000</item>
+        <item>5000</item>
+        <item>2000</item>
+        <item>0</item>
+        <item>100000</item>
+    </array>
+
+    <!-- 쿠폰 배열: 각 전화번호에 해당하는 쿠폰 정보를 저장하는 배열 (쉼표로 구분된 값들) -->
+    <!-- stamp, 1000, 2000, 3000, 4000, 5000 // 스탬프와 쿠폰 개수 -->
+    <array name="coupons">
+        <item>3,2,1,3,0,1</item>
+        <item>5,3,0,1,2,1</item>
+        <item>6,3,1,0,0,2</item>
+        <item>0,0,0,0,0,0</item>
+        <item>1,1,1,1,1,1</item>
+    </array>
+</resources>

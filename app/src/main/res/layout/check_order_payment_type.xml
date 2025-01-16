@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 카드 결제 프레임, 클릭 시 onClickCardPayment 호출 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1"
+        android:onClick="onClickCardPayment"
+        android:background="@color/my_purple"
+        android:clickable="true"
+        android:focusable="true" >
+
+        <!-- 카드 결제 내용의 세부 사항, 클릭 효과 및 여백 설정 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_background"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <!-- 카드 결제 제목 및 아이콘을 가로로 배치 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <!-- 카드 결제 텍스트 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="카드 결제" />
+
+                <!-- 카드 결제 아이콘 -->
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    app:tint="@color/white"
+                    app:srcCompat="@drawable/icon_card" />
+            </LinearLayout>
+
+            <!-- 카드 결제 보조 텍스트 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center|left"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:text="신용카드 / 삼성페이" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 간편 결제 프레임, 클릭 시 onClickEasyPayment 호출 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1"
+        android:onClick="onClickEasyPayment"
+        android:background="@color/my_purple"
+        android:clickable="true"
+        android:focusable="true" >
+
+        <!-- 간편 결제 내용의 세부 사항, 클릭 효과 및 여백 설정 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_background"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <!-- 간편 결제 제목 및 아이콘을 가로로 배치 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <!-- 간편 결제 텍스트 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="간편 결제" />
+
+                <!-- 간편 결제 아이콘 -->
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    app:tint="@color/white"
+                    app:srcCompat="@drawable/icon_scan" />
+
+            </LinearLayout>
+
+            <!-- 간편 결제 보조 텍스트 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center|left"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:text="네이버페이 / 카카오페이 / 제로페이 / SSG페이 / L페이 / 앱카드 / 그 외" />
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<!-- res/drawable/ripple_background.xml -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:attr/colorControlHighlight">  <!-- 클릭 시 효과의 색상 설정 -->
+
+    <!-- 여기에 기본 배경색을 설정할 수 있습니다. -->
+    <item android:id="@android:id/mask"
+        android:drawable="@android:color/white" /> <!-- 클릭 시 효과 영역의 색상 -->
+</ripple>

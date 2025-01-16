@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/number_pad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!-- 숫자 패드 테이블 레이아웃 -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <!-- 첫 번째 행: 1, 2, 3 버튼 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <!-- 1 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/number_pad_1"
+                android:layout_width="@dimen/numpad_button_width"
+                android:layout_height="@dimen/numpad_button_width"
+                android:layout_margin="@dimen/numpad_button_margin"
+                android:background="@drawable/button_border_selector"
+                android:text="1"
+                android:textColor="@color/my_purple"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <!-- 2 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/number_pad_2"
+                android:layout_width="@dimen/numpad_button_width"
+                android:layout_height="@dimen/numpad_button_width"
+                android:layout_margin="@dimen/numpad_button_margin"
+                android:background="@drawable/button_border_selector"
+                android:text="2"
+                android:textColor="@color/my_purple"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <!-- 3 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/number_pad_3"
+                android:layout_width="@dimen/numpad_button_width"
+                android:layout_height="@dimen/numpad_button_width"
+                android:layout_margin="@dimen/numpad_button_margin"
+                android:background="@drawable/button_border_selector"
+                android:text="3"
+                android:textColor="@color/my_purple"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <!-- 두 번째 행: 4, 5, 6 버튼 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <!-- 4 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/number_pad_4"
+                android:layout_width="@dimen/numpad_button_width"
+                android:layout_height="@dimen/numpad_button_width"
+                android:layout_margin="@dimen/numpad_button_margin"
+                android:background="@drawable/button_border_selector"
+                android:text="4"
+                android:textColor="@color/my_purple"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <!-- 5 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/number_pad_5"
+                android:layout_width="@dimen/numpad_button_width"
+                android:layout_height="@dimen/numpad_button_width"
+                android:layout_margin="@dimen/numpad_button_margin"
+                android:background="@drawable/button_border_selector"
+                android:text="5"
+                android:textColor="@color/my_purple"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <!-- 6 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/number_pad_6"
+                android:layout_width="@dimen/numpad_button_width"
+                android:layout_height="@dimen/numpad_button_width"
+                android:layout_margin="@dimen/numpad_button_margin"
+                android:background="@drawable/button_border_selector"
+                android:text="6"
+                android:textColor="@color/my_purple"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- 세 번째 행: 7, 8, 9 버튼 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <!-- 7 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/number_pad_7"
+                android:layout_width="@dimen/numpad_button_width"
+                android:layout_height="@dimen/numpad_button_width"
+                android:layout_margin="@dimen/numpad_button_margin"
+                android:background="@drawable/button_border_selector"
+                android:text="7"
+                android:textColor="@color/my_purple"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <!-- 8 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/number_pad_8"
+                android:layout_width="@dimen/numpad_button_width"
+                android:layout_height="@dimen/numpad_button_width"
+                android:layout_margin="@dimen/numpad_button_margin"
+                android:background="@drawable/button_border_selector"
+                android:text="8"
+                android:textColor="@color/my_purple"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <!-- 9 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/number_pad_9"
+                android:layout_width="@dimen/numpad_button_width"
+                android:layout_height="@dimen/numpad_button_width"
+                android:layout_margin="@dimen/numpad_button_margin"
+                android:background="@drawable/button_border_selector"
+                android:text="9"
+                android:textColor="@color/my_purple"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- 네 번째 행: C, 0, X 버튼 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <!-- C 버튼 (클리어) -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/number_pad_c"
+                android:layout_width="@dimen/numpad_button_width"
+                android:layout_height="@dimen/numpad_button_width"
+                android:layout_margin="@dimen/numpad_button_margin"
+                android:background="@drawable/button_border_selector"
+                android:text="C"
+                android:textColor="@color/my_light_gray"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <!-- 0 버튼 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/number_pad_0"
+                android:layout_width="@dimen/numpad_button_width"
+                android:layout_height="@dimen/numpad_button_width"
+                android:layout_margin="@dimen/numpad_button_margin"
+                android:background="@drawable/button_border_selector"
+                android:text="0"
+                android:textColor="@color/my_purple"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <!-- X 버튼 (Delete) -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/number_pad_x"
+                android:layout_width="@dimen/numpad_button_width"
+                android:layout_height="@dimen/numpad_button_width"
+                android:layout_margin="@dimen/numpad_button_margin"
+                android:background="@drawable/button_border_selector"
+                android:text="X"
+                android:textColor="@color/my_light_gray"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
