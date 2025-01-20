@@ -117,6 +117,8 @@ public interface PointsDialogCompleteListener {
 }
 ```
 
+***
+
 # • 3. 포인트 적립 위한 번호 입력 Dialog
 <div align="center">
   <img src="https://github.com/user-attachments/assets/51cad7a2-ede7-4016-9a36-9bf8117fc5db" alt="포인트 적립 번호 입력 Dialog" width="300">
@@ -183,6 +185,9 @@ public class EarnPointsFragment extends DialogFragment {
         return dialog; // 생성된 다이얼로그 반환
     }
 ```
+
+***
+
 # • 4. 신규 고객 확인 Dialog
 <div align="center">
   <img src="https://github.com/user-attachments/assets/c8ed419d-a5fb-414c-91b4-77ead4e083d4" alt="신규 고객 확인 Dialog" width="300">
@@ -210,3 +215,27 @@ public class EarnPointsFragment extends DialogFragment {
         showDialog();
     }
 ```
+
+***
+
+# • 5. 적립 포인트 사용 Dialog
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e85e9390-c5cd-410d-be2c-011cd8e7da57" alt="적립 포인트 사용 Dialog" width="300">
+</div>
+
+- 3, 4. Dialog 를 거치면 포인트 사용 Dialog 가 뜹니다. 신규 고객일 경우 포인트가 없기 때문에 넘버 패드나 전체 사용 버튼을 눌러도 입력되지 않습니다.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/1d9797a0-c650-4817-8592-e011251c0d97" alt="적립 포인트 사용 Dialog 3" width="300">
+  <img src="https://github.com/user-attachments/assets/886d11cf-a7a6-429a-a672-a46ded7cbb1c" alt="적립 포인트 사용 Dialog 4" width="300">
+</div>
+
+- 포인트가 있는 유저일 경우 최소 금액 이상 입력 되어야 파란 글씨로 바뀌고 확인 버튼도 활성화 됩니다. 그리고 확인 버튼을 누르면 주문 내역 확인 페이지로 돌아가서 할인 금액이 재설정 됩니다.
+
+***
+
+# • 6. 시연
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/9fc064bb-f5fb-437f-bb5b-30b484afdc5e" alt="app 시연" width="300">
+</div>
+
