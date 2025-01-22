@@ -117,7 +117,7 @@ public interface PointsDialogCompleteListener {
 }
 ```
 
-## 어려웠던 점
+## 문제와 해결
 처음에는 각각의 Dialog 에서 각각의 변수를 설정하여 다시 컨트롤러로 돌려보내는 방식으로 구현하려 했으나, 컨트롤러 내에서 변수 이름 설정, 컨트롤러 밖에서 값 사용 등 매우 복잡하여 후에 코드를 합칠 때 매우 어려움을 느꼈습니다.
 그래서 ***GlobalVariable*** 클래스에서 전역적으로 쓰기 위한 변수들을 설정해두고 쓰는 방식으로 변경하였습니다.
 
@@ -190,6 +190,10 @@ public class EarnPointsFragment extends DialogFragment {
     }
 ```
 
+## 문제와 해결
+3, 4, 5 번에 있는 Dialog 에서 NumberPadView 를 추가하거나 글씨에 효과를 주기 위한 SpannableString 를 사용하고 있으며, 추가적으로 변수값을 적용하기 위해 값을 불러온 뒤 TextView 에 값을 설정하고 있습니다.
+이 때 onCreateDialog 에서 findViewById 를 사용했을 때 NullPointerException 이 발생하였습니다. 그래서 ***setOnShowListener*** 를 사용하여 Dialog가 화면에 완전히 표시된 후 필요한 View 작업을 수행하도록 변경했습니다.
+
 ***
 
 # • 4. 신규 고객 확인 Dialog
@@ -220,6 +224,11 @@ public class EarnPointsFragment extends DialogFragment {
     }
 ```
 
+## 문제와 해결
+3번 Dialog 에서 4번 Dialog 로 넘어올 때, 8개의 문자를 입력하고 그것이 신규 고객일 때 넘어올 수 있도록 설계하였습니다. 그러나 이 때 8번째 문자를 입력할 때 숫자 버튼을 빠르게 누르게 되면 
+4번 Dialog 가 여러번 뜨는 현상이 발생하였습니다. 이 때, isAdded 와 isVisible 메소드도 사용해보았지만 해당 문제가 해결되지 않았습니다. 
+그래서 ***isDialogOpen*** 라는 상태 변수를 static 으로 선언하여 컨트롤러에서 조건문으로 체크하여 열 수 있도록 하였습니다.
+
 ***
 
 # • 5. 적립 포인트 사용 Dialog
@@ -243,3 +252,6 @@ public class EarnPointsFragment extends DialogFragment {
   <img src="https://github.com/user-attachments/assets/9fc064bb-f5fb-437f-bb5b-30b484afdc5e" alt="app 시연" width="300">
 </div>
 
+## 느낀점
+파트 분배함에 있어서 주어진 파트들이 크게 네 부분이 있어서 그 부분을 하나씩 맡아서 되었습니다. 이는 각자 해볼 수 있다는 장점이 있었지만, 같이 한다는 부분에 있어서는 아쉬움이 있었습니다.
+그리고 앱을 만드는 데에 있어서 작동시켰던 제 핸드폰을 기준으로만 만들다보니 다른 디바이스에서 View 부분들이 원하는 대로 보이지 않게 되었습니다. 만드는 데에 있어 그런 환경에 대해 더 고려해야함을 느꼈습니다.
