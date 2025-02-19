@@ -4,7 +4,7 @@
 
 -- 기간 : 12/23 ~ 1/07 
 
--- 팀원 : 🙍‍♂️엄정현, 🙍‍♂️김지욱, 🙍‍♂️[백건우](https://github.com/gunwoo100/ProJect2) : 메뉴 선택, 🙍‍♀️이새로미 : 주문 내역 확인
+-- 팀원 : 🙍‍♂️엄정현, 🙍‍♂️[김지욱](https://github.com/orangetunnelkim/myAndorid) : 쿠폰 할인, 🙍‍♂️[백건우](https://github.com/gunwoo100/ProJect2) : 메뉴 선택, 🙍‍♀️이새로미 : 주문 내역 확인
 
 -- ☕ 담당역할 : 포인트 적립 및 코드 통합
 
